@@ -4,7 +4,7 @@
 
 LRESULT CALLBACK winProc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 {
-	SSystemMessage* outMessage = (SSystemMessage*)GetWindowLongPtr(hwnd, GWL_USERDATA);
+	SSystemMessage* outMessage = (SSystemMessage*)GetWindowLongPtr(hwnd, GWLP_USERDATA);
 	switch (msg)
 	{
 	case WM_QUIT:
@@ -98,7 +98,7 @@ bool PlatformWin32::PopMessage(SSystemMessage* outMessage)
 	MSG msg = {};
 	if (PeekMessage(&msg, 0, 0, 0, PM_REMOVE))
 	{
-		SetWindowLongPtr(m_windows[0], GWL_USERDATA, (LONG_PTR)outMessage);
+		SetWindowLongPtr(m_windows[0], GWLP_USERDATA, (LONG_PTR)outMessage);
 		TranslateMessage(&msg);
 		DispatchMessage(&msg);
 

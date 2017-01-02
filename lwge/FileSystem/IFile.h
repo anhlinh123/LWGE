@@ -16,11 +16,11 @@ class IFile
 public:
 	virtual ~IFile() {};
 
-	virtual s32 Read(void* buffer, u32 sizeToRead) = 0;
-	virtual s32 Write(const void* buffer, u32 sizeToWrite) = 0;
+	virtual size_t Read(void* buffer, u32 sizeToRead) = 0;
+	virtual size_t Write(const void* buffer, u32 sizeToWrite) = 0;
 	virtual bool Seek(s32 offset, bool isFromCurPos = false) = 0;
-	virtual s32 GetSize() const = 0;
-	virtual s32 GetPos() const = 0;
+	virtual size_t GetSize() const = 0;
+	virtual size_t GetPos() const = 0;
 	virtual const Path& GetFileName() const = 0;
 };
 

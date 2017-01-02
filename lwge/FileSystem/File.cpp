@@ -20,12 +20,12 @@ bool File::IsValid()
 	return m_file != nullptr;
 }
 
-s32 File::Read(void * buffer, u32 sizeToRead)
+size_t File::Read(void * buffer, u32 sizeToRead)
 {
 	return fread(buffer, sizeof(c8), sizeToRead, m_file);
 }
 
-s32 File::Write(const void * buffer, u32 sizeToWrite)
+size_t File::Write(const void * buffer, u32 sizeToWrite)
 {
 	return fwrite(buffer, sizeof(c8), sizeToWrite, m_file);
 }
@@ -35,7 +35,7 @@ bool File::Seek(s32 offset, bool isFromCurPos)
 	return !fseek(m_file, offset, isFromCurPos);
 }
 
-s32 File::GetSize() const
+size_t File::GetSize() const
 {
 	s32 curPos = ftell(m_file);
 	fseek(m_file, 0, SEEK_END);
@@ -44,7 +44,7 @@ s32 File::GetSize() const
 	return size;
 }
 
-s32 File::GetPos() const
+size_t File::GetPos() const
 {
 	return ftell(m_file);
 }

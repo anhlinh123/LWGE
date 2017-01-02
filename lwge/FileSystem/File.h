@@ -15,11 +15,11 @@ public:
 
 	bool IsValid();
 
-	s32 Read(void * buffer, u32 sizeToRead) override;
-	s32 Write(const void * buffer, u32 sizeToWrite) override;
+	size_t Read(void * buffer, u32 sizeToRead) override;
+	size_t Write(const void * buffer, u32 sizeToWrite) override;
 	bool Seek(s32 offset, bool isFromCurPos = false) override;
-	s32 GetSize() const override;
-	s32 GetPos() const override;
+	size_t GetSize() const override;
+	size_t GetPos() const override;
 	const Path& GetFileName() const override;
 
 private:

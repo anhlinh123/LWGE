@@ -70,7 +70,7 @@ Path & Path::operator+=(const c8 * other)
 		return *this;
 
 	//Remove almost trailing slashes, leave out just one
-	s32 len = strlen(m_buffer) - 1;
+	size_t len = strlen(m_buffer) - 1;
 	for (; len >= 0; len--)
 	{
 		if (m_buffer[len] == '\\' || m_buffer[len] == '/')
