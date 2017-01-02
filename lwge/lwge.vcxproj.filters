@@ -3,7 +3,6 @@
   <ItemGroup>
     <ClCompile Include="Debugger\ConsoleLogger.cpp" />
     <ClCompile Include="Platform\platform_win32.cpp" />
-    <ClCompile Include="Renderer\IRenderContext.cpp" />
     <ClCompile Include="ServiceLocator.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="Application.cpp" />

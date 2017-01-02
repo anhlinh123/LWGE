@@ -35,6 +35,9 @@ void ServiceLocator::Init()
 
 	if (!m_asserter)
 		m_asserter = new NullAsserter();
+
+	if (!m_fileSystem)
+		m_fileSystem = new FileSystem();
 }
 
 void ServiceLocator::Deinit()

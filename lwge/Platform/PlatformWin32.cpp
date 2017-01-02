@@ -1,5 +1,6 @@
 #include "PlatformWin32.h"
 #include "../Renderer/OpenGLContext.h"
+#include "../Debugger/ILogger.h"
 
 LRESULT CALLBACK winProc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 {
@@ -65,6 +66,7 @@ u32 PlatformWin32::CreateNewWindow(s32 x, s32 y, u32 width, u32 height)
 
 	if (!m_windows[0])
 	{
+		LOG_E("Cannot create window");
 		UnregisterClass(className, hInstance);
 		return -1;
 	}

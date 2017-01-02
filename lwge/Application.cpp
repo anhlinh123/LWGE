@@ -22,14 +22,12 @@ void Application::Start()
 	m_window = m_platform->CreateNewWindow(100, 100, 640, 840);
 	if (m_window < 0)
 	{
-		Destroy();
 		return;
 	}
 
 	m_renderContext = m_platform->CreateRenderContext(ECT_OPENGL_3_0, m_window);
-	if (!m_renderContext)
+	if (!m_renderContext->IsValid())
 	{
-		Destroy();
 		return;
 	}
 
@@ -42,7 +40,6 @@ void Application::Start()
 		}
 		Update();
 	}
-	Destroy();
 }
 
 void Application::Update()

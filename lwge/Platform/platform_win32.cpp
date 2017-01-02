@@ -1,7 +1,7 @@
 #include "PlatformWin32.h"
 #include "../Application.h"
 
-#define TEST 1
+#define TEST 0
 
 int main()
 {

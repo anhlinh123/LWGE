@@ -10,9 +10,8 @@ enum EContextType
 class IRenderContext
 {
 public:
-	IRenderContext();
-	~IRenderContext();
-
+	virtual ~IRenderContext() {};
+	virtual bool IsValid() = 0;
 	virtual void Render() = 0;
 };
 
