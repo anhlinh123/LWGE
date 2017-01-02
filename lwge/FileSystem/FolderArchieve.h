@@ -11,8 +11,7 @@ public:
 	FolderArchieve(const c8* folderName);
 	~FolderArchieve();
 
-	bool Reload() override;
-	bool HasLoaded() override;
+	bool IsValid() override;
 	IFile * OpenFile(const Path& fileName, EAccessMode mode) override;
 	IFile * OpenFile(u32 index, EAccessMode mode) override;
 

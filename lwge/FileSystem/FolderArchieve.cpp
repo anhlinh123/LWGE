@@ -5,22 +5,15 @@
 FolderArchieve::FolderArchieve(const c8 * folderName)
 {
 	m_folderName = folderName;
-	Reload();
 }
 
 FolderArchieve::~FolderArchieve()
 {
 }
 
-bool FolderArchieve::Reload()
+bool FolderArchieve::IsValid()
 {
-	m_isLoaded = true;
 	return true;
-}
-
-bool FolderArchieve::HasLoaded()
-{
-	return m_isLoaded;
 }
 
 IFile * FolderArchieve::OpenFile(const Path& fileName, EAccessMode mode)

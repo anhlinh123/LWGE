@@ -8,9 +8,7 @@ class IFileArchieve
 public:
 	virtual ~IFileArchieve() {};
 
-	virtual bool Reload() = 0;
-	virtual bool HasLoaded() = 0;
-
+	virtual bool IsValid() = 0;
 	virtual IFile* OpenFile(const Path& fileName, EAccessMode mode) = 0;
 	virtual IFile* OpenFile(u32 index, EAccessMode mode) = 0;
 };

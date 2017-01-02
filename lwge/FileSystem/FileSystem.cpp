@@ -24,7 +24,7 @@ bool FileSystem::AddFileArchive(IFileArchieve * fileArchive)
 {
 	ASSERT(fileArchive != nullptr, "Can not add null archieve");
 
-	if (fileArchive->HasLoaded() || fileArchive->Reload())
+	if (fileArchive->IsValid())
 	{
 		m_fileArchives.push_back(fileArchive);
 		return true;
