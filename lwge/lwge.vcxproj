@@ -18,6 +18,44 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Debugger\ConsoleLogger.cpp" />
+    <ClCompile Include="FileSystem\File.cpp" />
+    <ClCompile Include="FileSystem\FileSystem.cpp" />
+    <ClCompile Include="FileSystem\FolderArchieve.cpp" />
+    <ClCompile Include="FileSystem\Path.cpp" />
+    <ClCompile Include="Platform\PlatformWin32.cpp" />
+    <ClCompile Include="Platform\platform_win32.cpp" />
+    <ClCompile Include="Renderer\OpenGLContext.cpp" />
+    <ClCompile Include="Renderer\IRenderContext.cpp" />
+    <ClCompile Include="ServiceLocator.cpp" />
+    <ClCompile Include="test.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application.h" />
+    <ClInclude Include="config.h" />
+    <ClInclude Include="Debugger\ConsoleLogger.h" />
+    <ClInclude Include="Debugger\IAsserter.h" />
+    <ClInclude Include="Debugger\ILogger.h" />
+    <ClInclude Include="Debugger\StandardAsserter.h" />
+    <ClInclude Include="FileSystem\File.h" />
+    <ClInclude Include="FileSystem\FileSystem.h" />
+    <ClInclude Include="FileSystem\IFile.h" />
+    <ClInclude Include="FileSystem\IFileArchieve.h" />
+    <ClInclude Include="FileSystem\IFileSystem.h" />
+    <ClInclude Include="FileSystem\FolderArchieve.h" />
+    <ClInclude Include="FileSystem\Path.h" />
+    <ClInclude Include="Platform\PlatformWin32.h" />
+    <ClInclude Include="Platform\IPlatform.h" />
+    <ClInclude Include="Platform\SSystemMessage.h" />
+    <ClInclude Include="Renderer\OpenGLContext.h" />
+    <ClInclude Include="Renderer\glext.h" />
+    <ClInclude Include="Renderer\IRenderContext.h" />
+    <ClInclude Include="Renderer\wglext.h" />
+    <ClInclude Include="ServiceLocator.h" />
+    <ClInclude Include="types.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{010C41C1-6FAF-473E-A35C-2DD4E870CDC6}</ProjectGuid>
     <RootNamespace>lwge</RootNamespace>
@@ -109,8 +147,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
