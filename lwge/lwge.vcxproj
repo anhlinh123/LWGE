@@ -27,7 +27,8 @@
     <ClCompile Include="FileSystem\Path.cpp" />
     <ClCompile Include="Platform\PlatformWin32.cpp" />
     <ClCompile Include="Platform\platform_win32.cpp" />
-    <ClCompile Include="Renderer\OpenGLContext.cpp" />
+    <ClCompile Include="Renderer\OpenGL\OpenGLContext.cpp" />
+    <ClCompile Include="Renderer\OpenGL\SOpenGLMeshBuffer.cpp" />
     <ClCompile Include="ServiceLocator.cpp" />
     <ClCompile Include="test.cpp" />
   </ItemGroup>
@@ -48,10 +49,17 @@
     <ClInclude Include="Platform\PlatformWin32.h" />
     <ClInclude Include="Platform\IPlatform.h" />
     <ClInclude Include="Platform\SSystemMessage.h" />
-    <ClInclude Include="Renderer\OpenGLContext.h" />
-    <ClInclude Include="Renderer\glext.h" />
+    <ClInclude Include="Renderer\Core\maths.h" />
+    <ClInclude Include="Renderer\Core\SMesh.h" />
+    <ClInclude Include="Renderer\Core\Vector2.h" />
+    <ClInclude Include="Renderer\Core\Vector3.h" />
+    <ClInclude Include="Renderer\OpenGL\OpenGL.h" />
+    <ClInclude Include="Renderer\OpenGL\OpenGLContext.h" />
+    <ClInclude Include="Renderer\OpenGL\glext.h" />
     <ClInclude Include="Renderer\IRenderContext.h" />
-    <ClInclude Include="Renderer\wglext.h" />
+    <ClInclude Include="Renderer\Core\SVertex.h" />
+    <ClInclude Include="Renderer\OpenGL\SOpenGLMeshBuffer.h" />
+    <ClInclude Include="Renderer\OpenGL\wglext.h" />
     <ClInclude Include="ServiceLocator.h" />
     <ClInclude Include="types.h" />
   </ItemGroup>

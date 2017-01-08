@@ -1,5 +1,6 @@
 #include "OpenGLContext.h"
-#include "../Debugger/ILogger.h"
+#include "SOpenGLMeshBuffer.h"
+#include "../../Debugger/ILogger.h"
 
 #ifdef _MSC_VER
 #pragma comment(lib, "OpenGL32.lib")
@@ -897,16 +898,30 @@ void OpenGLContext::LoadCoreFunctions()
 	glSampleMaski = (PFNGLSAMPLEMASKIPROC)GetProcAddress("glSampleMaski");
 }
 
+void OpenGLContext::UploadMesh(SMesh * mesh)
+{
+	SOpenGLMeshBuffer* buffer = m_meshBuffers[mesh];
+	if (buffer == nullptr)
+	{
+		buffer = new SOpenGLMeshBuffer(mesh);
+		m_meshBuffers[mesh] = buffer;
+	}
+	else 
+	{
+		buffer->Reload(mesh);
+	}
+}
+
 bool OpenGLContext::IsValid()
 {
 	return m_hrc != NULL;
 }
 
-void OpenGLContext::Render()
-{
-	glClearColor(0.0, 0.0, 0.0, 0.0);
-	glClear(GL_COLOR_BUFFER_BIT);
-#ifdef _WIN32
-	SwapBuffers(m_hdc);
-#endif
-}
+//void OpenGLContext::Render(IMeshBuffer * buffer)
+//{
+//	glClearColor(0.0, 0.0, 0.0, 0.0);
+//	glClear(GL_COLOR_BUFFER_BIT);
+//#ifdef _WIN32
+//	SwapBuffers(m_hdc);
+//#endif
+//}

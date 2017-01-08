@@ -1,5 +1,5 @@
 #include "PlatformWin32.h"
-#include "../Renderer/OpenGLContext.h"
+#include "../Renderer/OpenGL/OpenGLContext.h"
 #include "../Debugger/ILogger.h"
 
 LRESULT CALLBACK winProc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)

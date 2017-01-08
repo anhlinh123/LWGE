@@ -45,7 +45,7 @@ void Application::Start()
 void Application::Update()
 {
 	OnUpdate();
-	m_renderContext->Render();
+	//m_renderContext->Render();
 }
 
 void Application::Destroy()

@@ -1,19 +1,13 @@
 #ifndef __OPENGLCONTEXT_H__
 #define __OPENGLCONTEXT_H__
 
-#include "IRenderContext.h"
+#include "../IRenderContext.h"
+#include "OpenGL.h"
 
-#ifdef _WIN32
-#include <Windows.h>
-#endif // _WIN32
+#include <unordered_map>
 
-#include <gl\GL.h>
-#include "glext.h"
-
-#ifdef _WIN32
-#include "wglext.h"  
-#endif // _WIN32
-
+struct SMesh;
+struct SOpenGLMeshBuffer;
 
 class OpenGLContext :
 	public IRenderContext
@@ -26,7 +20,7 @@ public:
 	~OpenGLContext();
 
 	bool IsValid() override;
-	void Render() override;
+	void UploadMesh(SMesh * mesh) override;
 
 private:
 	void LoadCoreFunctions();
@@ -35,6 +29,8 @@ private:
 	HDC m_hdc;
 	HGLRC m_hrc;
 #endif // _WIN32
+
+	std::unordered_map<SMesh*, SOpenGLMeshBuffer*> m_meshBuffers;
 };
 
 #endif // !__COPENGLCONTEXT_H__

@@ -7,11 +7,12 @@
     <ClCompile Include="test.cpp" />
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="Platform\PlatformWin32.cpp" />
-    <ClCompile Include="Renderer\OpenGLContext.cpp" />
     <ClCompile Include="FileSystem\FileSystem.cpp" />
     <ClCompile Include="FileSystem\FolderArchieve.cpp" />
     <ClCompile Include="FileSystem\File.cpp" />
     <ClCompile Include="FileSystem\Path.cpp" />
+    <ClCompile Include="Renderer\OpenGL\OpenGLContext.cpp" />
+    <ClCompile Include="Renderer\OpenGL\SOpenGLMeshBuffer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Debugger\ConsoleLogger.h" />
@@ -20,15 +21,12 @@
     <ClInclude Include="Debugger\StandardAsserter.h" />
     <ClInclude Include="Platform\IPlatform.h" />
     <ClInclude Include="Platform\SSystemMessage.h" />
-    <ClInclude Include="Renderer\glext.h" />
     <ClInclude Include="Renderer\IRenderContext.h" />
-    <ClInclude Include="Renderer\wglext.h" />
     <ClInclude Include="config.h" />
     <ClInclude Include="ServiceLocator.h" />
     <ClInclude Include="types.h" />
     <ClInclude Include="Application.h" />
     <ClInclude Include="Platform\PlatformWin32.h" />
-    <ClInclude Include="Renderer\OpenGLContext.h" />
     <ClInclude Include="FileSystem\IFile.h" />
     <ClInclude Include="FileSystem\IFileSystem.h" />
     <ClInclude Include="FileSystem\FileSystem.h" />
@@ -36,5 +34,15 @@
     <ClInclude Include="FileSystem\IFileArchieve.h" />
     <ClInclude Include="FileSystem\File.h" />
     <ClInclude Include="FileSystem\Path.h" />
+    <ClInclude Include="Renderer\Core\Vector2.h" />
+    <ClInclude Include="Renderer\Core\maths.h" />
+    <ClInclude Include="Renderer\Core\Vector3.h" />
+    <ClInclude Include="Renderer\Core\SVertex.h" />
+    <ClInclude Include="Renderer\Core\SMesh.h" />
+    <ClInclude Include="Renderer\OpenGL\OpenGL.h" />
+    <ClInclude Include="Renderer\OpenGL\OpenGLContext.h" />
+    <ClInclude Include="Renderer\OpenGL\SOpenGLMeshBuffer.h" />
+    <ClInclude Include="Renderer\OpenGL\wglext.h" />
+    <ClInclude Include="Renderer\OpenGL\glext.h" />
   </ItemGroup>
 </Project>
